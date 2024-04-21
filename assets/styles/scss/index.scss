@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-dark: #391400;
+  --text-accent: #ef6d58;
+  --text-dark-gray: rgba(57, 20, 0, 0.64);
+  --text-light: #ffffff;
+  --text-light-gray: rgba(255, 255, 255, 0.64);
+  --dark-primary: #b550f8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-style: normal;
+}
+h1 {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 80px; /* 111.111% */
+  letter-spacing: -2px;
+}
+h2 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 64px; /* 114.286% */
+  letter-spacing: -1px;
+}
+h3 {
+  font-size: 40px;
+  line-height: 48px; /* 120% */
+}
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+}
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-accent) !important;
+}
+label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@layer components {
+  // Text
+  .text-gray {
+    color: var(--text-dark-gray);
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .text-small {
+    color: var(--text-dark-gray);
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  // Buttons
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 56px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 900;
+
+    &.btn-primary {
+      border: 1px solid var(--text-accent);
+      background-color: var(--text-accent);
+      color: var(--text-light);
+    }
+    &.btn-outline {
+      background-color: var(--text-light);
+      border-color: var(--text-accent);
+      color: var(--text-dark);
+    }
+  }
+}
+
+body {
+  color: var(--text-dark);
+  &.dark {
+    color: var(--text-light);
+
+    .text-gray {
+      color: var(--text-light-gray);
+    }
+
+    .btn-primary {
+      border: 1px solid var(--dark-primary);
+      background-color: var(--dark-primary);
+    }
+    .btn-outline {
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--text-light);
+    }
+  }
+}
