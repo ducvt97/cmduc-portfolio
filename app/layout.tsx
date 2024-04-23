@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Epilogue } from "next/font/google";
 import "@/assets/styles/css/globals.css";
 import "@/assets/styles/scss/index.scss"
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Epilogue({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Duc Chu Minh - Professional Web Developer",
