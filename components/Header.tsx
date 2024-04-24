@@ -3,7 +3,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <nav className="dark px-8">
+    <nav className="bg-dark px-8">
       <div className="header">
         <div className="logo">LOGO</div>
         <div className="links">
