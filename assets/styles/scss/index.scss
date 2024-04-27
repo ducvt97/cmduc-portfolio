@@ -137,6 +137,41 @@ label {
     }
   }
 
+  .input-field {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+    position: relative;
+
+    .input {
+      padding: 8px 16px;
+      border: 1px solid var(--border-accent);
+      border-radius: 8px;
+      &:focus,
+      &:focus-visible {
+        border-color: var(--text-accent);
+        outline: none;
+      }
+    }
+    .input:required + label {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      &::after {
+        content: "*";
+        color: red;
+        font-size: 14px;
+      }
+    }
+    .input:focus + label {
+      padding: 0 4px;
+      top: -8px;
+      left: 12px;
+      z-index: 1;
+      background-color: var(--text-light);
+    }
+  }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -146,7 +181,7 @@ label {
     border: 1px solid var(--text-dark);
     background-color: var(--bg-light);
     color: var(--text-dark);
-    
+
     &.card-light {
       border-color: var(--border-accent);
     }

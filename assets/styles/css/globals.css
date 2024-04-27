@@ -35,6 +35,10 @@ body {
   line-height: 20px;
 }
 
+* {
+  transition: all .3s;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
