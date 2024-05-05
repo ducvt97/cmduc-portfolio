@@ -63,6 +63,13 @@ label {
 }
 
 @layer base {
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 32px;
+    width: 100%;
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -72,7 +79,8 @@ label {
     .links {
       display: flex;
       gap: 60px;
-      .text-gray:hover {
+      a.active,
+      a:hover {
         color: var(--text-light);
       }
     }
@@ -99,16 +107,19 @@ label {
   .text-gray {
     color: var(--text-dark-gray);
   }
+  .text-accent {
+    color: var(--text-accent);
+  }
   .text-small {
     font-size: 14px;
     line-height: 24px;
   }
-  .text-lg {
+  .text-large {
     font-size: 20px;
     font-style: normal;
     line-height: 32px;
   }
-  .text-md {
+  .text-medium {
     font-size: 16px;
     font-style: normal;
     line-height: 28px;
